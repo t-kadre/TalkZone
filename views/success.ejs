@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalkZone</title>
+  <link rel="stylesheet" href="common.css">
+  <style>
+    input[type="text"] {
+      padding: 10px;
+      margin-right: 10px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo">TalkZone</div>
+    <div id="date"></div>
+  </header>
+  
+  <div class="container">
+    <p>
+        Meeting scheduled successfully! All the attendees will recieve a meeting reminder 15 minutes prior to the scheduled time on their email IDs.
+    </p>
+    <button id="back">Back to home</button> 
+  </div>
+
+  <script>
+  
+    function displayDateTime() {
+      const currentDate = new Date();
+      const dateElement = document.getElementById('date');
+      dateElement.textContent = currentDate.toLocaleString();
+    }
+    displayDateTime();
+    setInterval(displayDateTime, 1000);
+
+    const back=document.getElementById('back')
+    back.addEventListener('click',(req,res)=>{
+        fetch('/home')
+        .then(response=>{
+            return response.text()
+        }).then(data=>{
+            window.location.href='/home'
+        }).catch(err=>console.log(err))
+    })
+  </script>
+</body>
+</html>

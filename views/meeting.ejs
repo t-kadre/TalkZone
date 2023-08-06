@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Meeting - TalkZone</title>
+  <link rel="stylesheet" href="common.css">
+  <style>
+    form {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+ 
+    input[type="text"],
+    input[type="datetime-local"],
+    textarea {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      input[type="text"],
+      input[type="datetime-local"],
+      textarea {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo">TalkZone</div>
+    <div id="date"></div>
+  </header>
+  
+  <div class="container">
+    <h1>Schedule a Meeting</h1>
+    <form action="/done" method="post">
+      <label for="meetingDate">Meeting Date:</label>
+      <input type="text" name="meetingDate" placeholder="Date in MM/DD/YYYY format. For example '04/07/2023' for 7 April 2023" id="meetingDate" required>
+
+      <label for="meetingTime">Meeting Time:</label>
+      <input type="text" name="meetingTime" placeholder="Time in 24h format. For example '14:00' for 2 PM" id="meetingTime" required>
+
+      <label for="emailIds">Email IDs of Attendees:</label>
+      <input type="text" id="emailIds" name="emailIds" placeholder="Separate multiple email IDs with commas including your (without space)" required>
+
+      <label for="agenda">Agenda:</label>
+      <textarea id="agenda" name="agenda" placeholder="Agenda for the meeting" required></textarea>
+
+      <button type="submit">Schedule Meeting</button>
+    </form>
+  </div>
+
+  <script>
+    
+    function displayDateTime() {
+      const currentDate = new Date();
+      const dateElement = document.getElementById('date');
+      dateElement.textContent = currentDate.toLocaleString();
+    }
+    
+    displayDateTime();
+    setInterval(displayDateTime, 1000);
+
+  </script>
+</body>
+</html>
