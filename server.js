@@ -56,7 +56,7 @@
         service:'gmail',
         auth:{
             user:'tejaskadre1455@gmail.com',
-            pass:'jrluzsqyfqjnrjwv'
+            pass:'urkytggwmrmvcmcd'
         }
     })
 
