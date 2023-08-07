@@ -68,24 +68,26 @@ Schedule a meeting at a specified date and time. It automatically sends out remi
 
 ## Installation
 
-- Clone the repository or download the zip file
+- Clone the repository by opening your terminal and navigating to the directory where you want to clone the repository. Then, run the following command:
 ```bash
   git clone https://github.com/t-kadre/TalkZone
 ```
 
-- Install all packages and project dependencies 
+- Navigate to the App Directory:
+```bash
+  cd TalkZone
+```
+
+- Install the required dependencies using npm package manager:
 ```bash
   npm install
 ```
-
-- Start the server
+- Start the development server:
 ```bash
   npm run devStart
 ```
-- Website is hosted on port 3000
-```bash
-  localhost:3000
-```
+- Access the website by visiting 'http://localhost:3000'
+
 ## Images of Working App
 - Google OAuth 2.0 authentication page:
 ![Google OAuth 2.0 authentication page](https://github.com/t-kadre/TalkZone/assets/106656556/c282a724-7fee-460a-836f-e75ca7d98f63)
