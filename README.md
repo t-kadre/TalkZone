@@ -25,7 +25,7 @@
 TalkZone is a web-based video conferencing application that allows users to easily connect and communicate with each other in real-time using WebRTC technology. It utilizes Express, Socket.io and PeerJS libraries to establish peer-to-peer connections. Additionally, it offers features such as screen sharing, whiteboard sharing, real-time chatbox and much more.
 ## [Video Demonstration](https://drive.google.com/file/d/1851LWB5BhKlXBmT1cXzsxgFgUzfc7vN6/view?usp=sharing)
 ## Key Features
-### Shareable Collaborative Whiteboard
+### Collaborative Whiteboard
 Collaborate with participants in real-time on a shareable whiteboard. Draw, annotate, erase and brainstorm ideas together during the meeting.
 
 ### Screen Share
@@ -87,7 +87,21 @@ Schedule a meeting at a specified date and time. It automatically sends out remi
   localhost:3000
 ```
 ## Images of Working App
+- Google OAuth 2.0 authentication page:
+![Google OAuth 2.0 authentication page](https://github.com/t-kadre/TalkZone/assets/106656556/c282a724-7fee-460a-836f-e75ca7d98f63)
 
+- Home page:
+![homepage](https://github.com/t-kadre/TalkZone/assets/106656556/a9d71272-48f4-4423-9660-5ae8ce5b6dd4)
 
+- Room layout:
+![room layout](https://github.com/t-kadre/TalkZone/assets/106656556/97c2bdde-91eb-4dda-babe-10df1e42f7d1)
 
+- Screen sharing feature:
+![share screen](https://github.com/t-kadre/TalkZone/assets/106656556/d1e64efa-477b-469b-8d6a-c9228b03e816)
+
+- Whiteboard feature:
+![whiteboard](https://github.com/t-kadre/TalkZone/assets/106656556/159daf2d-2df9-4df7-a52c-d2cdef6513bf)
+
+- Schedule Meeting:
+![schedule meeting](https://github.com/t-kadre/TalkZone/assets/106656556/502ee085-ecbc-4b1e-aedc-734ca44aef22)
 
